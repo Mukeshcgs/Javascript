@@ -11,16 +11,23 @@ module.exports = {
   },
   module: {
     loaders: [{
+      test: /\.modernizrrc.js$/,
+      exclude: /(node_modules)/,
+      loader: 'modernizr-loader',
+
+    },{
+      test: /\.modernizrrc(\.json)?$/,
+      exclude: /(node_modules)/,
+      loader: [ 'modernizr-loader', 'json-loader' ],
+
+    },{
       test: /\.jsx?$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel-loader',
-      options: {
-        presets: ['env']
+      query: {
+        plugins: ['lodash'],
+        presets: [['env', { 'targets': { 'node': 4 } }]]
       }
-      // query: {
-      //   presets: [ 'es2015', 'stage-0'],
-      //   plugins: [, 'transform-class-properties', 'transform-decorators-legacy'],
-      // }
     },
     {
       test: /\.scss$/,
@@ -47,6 +54,11 @@ module.exports = {
       ]
     }
     ]
+  },
+  resolve: {
+    alias: {
+      modernizr$: path.resolve(__dirname, ".modernizrrc")
+    }
   },
   devServer: {
     historyApiFallback: true,
