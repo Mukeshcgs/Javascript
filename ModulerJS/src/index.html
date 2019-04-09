@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Module Study</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background: #cccccc;
+        }
+
+        header {
+            position: relative;
+            color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
+            text-align: center;
+        }
+
+        article {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #ffffff
+        }
+
+        .c-header-home_section {
+            visibility: hidden;
+            transition: visibility 0s 1.7s;
+        }
+
+        .c-header-home_section.is-current {
+            visibility: visible;
+            transition-delay: 0s;
+        }
+
+        button {
+            z-index: 9999999;
+            position: relative;
+        }
+
+        .is-current {
+            background: #1c1ca8 !important;
+            color: red !important;
+            z-index: 99999;
+        }
+
+        p {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header data-module="Slider">
+        <button class="js-slider-home-button js-slider-home-prev" type="button">
+            PRIV
+        </button>
+        <button class="js-slider-home-button js-slider-home-next" type="button">
+            NEXT
+        </button>
+        <article class="c-header-home_section is-current js-slider-home-slide" data-slide="1">
+            <h1>01</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                minima natus delectus, libero ipsa in.</p>
+        </article>
+        <article class="c-header-home_section js-slider-home-slide" data-slide="2">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                minima natus delectus, libero ipsa in.</p>
+            <h1>02</h1>
+        </article>
+        <article class="c-header-home_section js-slider-home-slide" data-slide="3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                minima natus delectus, libero ipsa in.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                minima natus delectus, libero ipsa in.</p>
+            <h1>03</h1>
+        </article>
+        <article class="c-header-home_section is-current js-slider-home-slide" data-slide="4">
+                <h1>01</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                    blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                    minima natus delectus, libero ipsa in.</p>
+            </article>
+            <article class="c-header-home_section js-slider-home-slide" data-slide="5">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                    blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                    minima natus delectus, libero ipsa in.</p>
+                <h1>02</h1>
+            </article>
+            <article class="c-header-home_section js-slider-home-slide" data-slide="6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                    blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                    minima natus delectus, libero ipsa in.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempore labore nesciunt placeat
+                    blanditiis, repellat laudantium soluta aperiam explicabo temporibus iusto quibusdam velit corrupti
+                    minima natus delectus, libero ipsa in.</p>
+                <h1>03</h1>
+            </article>
+    </header>
+</body>
+
+</html>
